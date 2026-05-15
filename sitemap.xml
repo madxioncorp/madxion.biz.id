@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://madxion.biz.id/services/branding/</loc>
+    <loc>http://localhost:1313/services/branding/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/products/nexus-analytics/</loc>
+    <loc>http://localhost:1313/products/nexus-analytics/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/services/seo-optimization/</loc>
+    <loc>http://localhost:1313/services/seo-optimization/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/products/ovim/</loc>
+    <loc>http://localhost:1313/products/ovim/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/services/digital-marketing/</loc>
+    <loc>http://localhost:1313/services/digital-marketing/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/services/web-app-dev/</loc>
+    <loc>http://localhost:1313/services/web-app-dev/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/services/</loc>
+    <loc>http://localhost:1313/services/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/products/sentinel-security/</loc>
+    <loc>http://localhost:1313/products/sentinel-security/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/services/teknologi-informasi/</loc>
+    <loc>http://localhost:1313/services/teknologi-informasi/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-05-14T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
     <lastmod>2026-05-13T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/portfolio/</loc>
+    <loc>http://localhost:1313/portfolio/</loc>
     <lastmod>2026-05-13T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/products/</loc>
+    <loc>http://localhost:1313/products/</loc>
     <lastmod>2026-05-13T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2026-05-13T10:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://madxion.biz.id/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://madxion.biz.id/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

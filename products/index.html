@@ -1,65 +1,42 @@
 <!DOCTYPE html>
-<html class="dark" lang="id-id">
-<head>
+<html lang="id-id">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Produk Kami | MadXion Corp</title>
+    
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
           tailwind.config = {
             darkMode: "class",
             theme: {
               extend: {
                 "colors": {
-                        "on-tertiary-fixed": "#2a1800",
-                        "tertiary-fixed": "#ffddb5",
-                        "on-surface": "#e5e2e1",
-                        "on-secondary-fixed": "#251a00",
-                        "tertiary-fixed-dim": "#ffb958",
-                        "primary-container": "#d90404",
-                        "primary-fixed": "#ffdad4",
-                        "tertiary-container": "#956000",
-                        "on-primary-fixed-variant": "#930001",
-                        "error-container": "#93000a",
-                        "inverse-on-surface": "#313030",
-                        "error": "#ffb4ab",
-                        "surface-container-low": "#1c1b1b",
-                        "background": "#131313",
-                        "on-tertiary": "#462b00",
-                        "on-primary-container": "#ffe9e6",
-                        "on-background": "#e5e2e1",
-                        "on-secondary-fixed-variant": "#5b4300",
-                        "secondary-fixed-dim": "#f9bd14",
-                        "on-tertiary-container": "#ffead4",
-                        "surface-bright": "#393939",
-                        "inverse-surface": "#e5e2e1",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-highest": "#353534",
-                        "surface-container-high": "#2a2a2a",
-                        "on-primary": "#690000",
-                        "on-secondary-container": "#634900",
-                        "surface-variant": "#353534",
-                        "secondary": "#ffd579",
-                        "surface-dim": "#131313",
-                        "primary": "#ffb4a8",
-                        "surface": "#131313",
-                        "secondary-fixed": "#ffdf9d",
-                        "on-surface-variant": "#e8bcb5",
-                        "on-tertiary-fixed-variant": "#643f00",
-                        "primary-fixed-dim": "#ffb4a8",
-                        "on-secondary": "#3f2e00",
-                        "secondary-container": "#f0b500",
-                        "on-error": "#690005",
-                        "outline": "#af8781",
-                        "tertiary": "#ffb958",
-                        "inverse-primary": "#c00002",
-                        "surface-container": "#201f1f",
-                        "surface-tint": "#ffb4a8",
-                        "surface-container-lowest": "#0e0e0e",
-                        "outline-variant": "#5e3f3a",
-                        "on-primary-fixed": "#410000"
+                        "on-surface": "var(--on-surface)",
+                        "background": "var(--background)",
+                        "primary-container": "var(--primary-container)",
+                        "on-primary-container": "var(--on-primary-container)",
+                        "on-background": "var(--on-background)",
+                        "surface-container-low": "var(--surface-container-low)",
+                        "surface-container-highest": "var(--surface-container-highest)",
+                        "surface-container-high": "var(--surface-container-high)",
+                        "surface-variant": "var(--surface-variant)",
+                        "secondary": "var(--secondary)",
+                        "surface": "var(--surface)",
+                        "on-surface-variant": "var(--on-surface-variant)",
+                        "surface-container": "var(--surface-container)",
+                        "outline": "rgb(var(--outline) / <alpha-value>)",
+                        "outline-variant": "rgb(var(--outline-variant) / <alpha-value>)",
                 },
                 "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -101,10 +78,49 @@
           }
         </script>
     <style>
+        :root {
+            --background: #fcfcfc;
+            --on-background: #1a1c1e;
+            --surface: #f3f3f3;
+            --on-surface: #1a1c1e;
+            --on-surface-variant: #49454f;
+            --surface-variant: #e7e0ec;
+            --surface-container-lowest: #ffffff;
+            --surface-container-low: #f7f2fa;
+            --surface-container: #f3edf7;
+            --surface-container-high: #ece6f0;
+            --surface-container-highest: #e6e0e9;
+            --primary-container: #d90404;
+            --on-primary-container: #ffffff;
+            --secondary: #625b71;
+            --outline: 121 116 126;
+            --outline-variant: 121 116 126;
+        }
+
+        .dark {
+            --background: #131313;
+            --on-background: #e5e2e1;
+            --surface: #131313;
+            --on-surface: #e5e2e1;
+            --on-surface-variant: #e8bcb5;
+            --surface-variant: #353534;
+            --surface-container-lowest: #0e0e0e;
+            --surface-container-low: #1c1b1b;
+            --surface-container: #201f1f;
+            --surface-container-high: #2a2a2a;
+            --surface-container-highest: #353534;
+            --primary-container: #d90404;
+            --on-primary-container: #ffe9e6;
+            --secondary: #ffd579;
+            --outline: 140 140 140;
+            --outline-variant: 80 80 80;
+        }
+
         body {
-            background-color: #0A0A0A;
-            color: #e5e2e1;
+            background-color: var(--background);
+            color: var(--on-surface);
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -113,18 +129,27 @@
             background: radial-gradient(circle at center, rgba(217, 4, 4, 0.15) 0%, transparent 70%);
         }
         .tech-grid {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-image: linear-gradient(rgb(var(--outline-variant) / 0.1) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgb(var(--outline-variant) / 0.1) 1px, transparent 1px);
             background-size: 40px 40px;
+        }
+        .glass-card {
+            background: rgba(var(--surface-rgb, 255, 255, 255), 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .dark .glass-card {
+            background: rgba(32, 31, 31, 0.6);
         }
     </style>
 </head>
 <body class="font-body-md text-body-md">
-    <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 h-20">
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline/10 h-20">
     <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <div class="flex items-center gap-sm">
-            <a href="https://madxion.biz.id/" class="flex items-center gap-sm">
+            <a href="http://localhost:1313/" class="flex items-center gap-sm">
                 <img alt="MadXion Corp Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfUJ8LRWdn2rFTXR9o14Tc1c0eWlqj-CTdv3P2By7ZiNCpeuFKcxWKI1Imtl2W_JV3_F2fDDOIQOyPjjdstizclwQ"/>
-                <span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight">MadXion Corp</span>
+                <span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">MadXion Corp</span>
             </a>
         </div>
         <div class="hidden md:flex items-center gap-lg">
@@ -142,7 +167,45 @@
             
             <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/contact/">Kontak</a>
             
+            
+            
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-surface-container-high transition-colors flex items-center justify-center text-on-surface" aria-label="Toggle Theme">
+                <span id="theme-toggle-dark-icon" class="material-symbols-outlined hidden">light_mode</span>
+                <span id="theme-toggle-light-icon" class="material-symbols-outlined hidden">dark_mode</span>
+            </button>
         </div>
+
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    
+    function updateIcons() {
+        if (document.documentElement.classList.contains('dark')) {
+            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add('hidden');
+        } else {
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        }
+    }
+
+    
+    updateIcons();
+
+    themeToggleBtn.addEventListener('click', function() {
+        
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+        updateIcons();
+    });
+</script>
     </div>
 </nav>
 
@@ -195,11 +258,11 @@
                     </ul>
                     <div class="flex flex-wrap gap-md">
                         <a href="/products/nexus-analytics/" class="bg-primary-container text-white px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:shadow-[0_0_15px_rgba(217,4,4,0.4)] transition-all">Detail Produk</a>
-                        <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20tertarik%20dengan%20Nexus%20Analytics." target="_blank" class="border border-secondary text-secondary px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/10 transition-all text-center">Hubungi Penjualan</a>
+                        <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20tertarik%20dengan%20Nexus%20Analytics." target="_blank" class="border border-secondary/15 text-secondary px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/10 transition-all text-center">Hubungi Penjualan</a>
                     </div>
                 </div>
-                <div class="relative min-h-[400px] bg-surface-container-low flex items-center justify-center p-md lg:p-lg border-l border-white/5 ">
-                    <img alt="Nexus Analytics Interface" class="w-full h-full object-cover rounded-lg border border-white/10 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiR3y9K9yPIjleYsITdc31ME7GqC9OG701BYr8GspgdHMOoGAEGfpq9kWu2MMok6biu6te20UP8-Qqj9P0s8Jav7ywNI97_alD8RCX9GkjfR50h_stP8cF0u9IgnC4-Iseoa88HmBKKYqbiSdcTJDvCSkAG2tjaKpxdhYf8bPmod8VRT44gx83u71AvLjEsIVdIssrvFOW7WiKsNH6szVKkusDVYxSwy0aUbV6Et99BMCwDONi-1qj3tNoV0K6sG8cxdkn7iIjZsM"/>
+                <div class="relative min-h-[400px] bg-surface-container-low flex items-center justify-center p-md lg:p-lg border-l border-outline ">
+                    <img alt="Nexus Analytics Interface" class="w-full h-full object-cover rounded-lg border border-outline shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiR3y9K9yPIjleYsITdc31ME7GqC9OG701BYr8GspgdHMOoGAEGfpq9kWu2MMok6biu6te20UP8-Qqj9P0s8Jav7ywNI97_alD8RCX9GkjfR50h_stP8cF0u9IgnC4-Iseoa88HmBKKYqbiSdcTJDvCSkAG2tjaKpxdhYf8bPmod8VRT44gx83u71AvLjEsIVdIssrvFOW7WiKsNH6szVKkusDVYxSwy0aUbV6Et99BMCwDONi-1qj3tNoV0K6sG8cxdkn7iIjZsM"/>
                 </div>
             </div>
             
@@ -233,11 +296,11 @@
                     </ul>
                     <div class="flex flex-wrap gap-md">
                         <a href="/products/ovim/" class="bg-primary-container text-white px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:shadow-[0_0_15px_rgba(217,4,4,0.4)] transition-all">Detail Produk</a>
-                        <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20tertarik%20dengan%20OVIM%20%28Video%20%26%20Image%20Modifier%29." target="_blank" class="border border-secondary text-secondary px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/10 transition-all text-center">Hubungi Penjualan</a>
+                        <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20tertarik%20dengan%20OVIM%20%28Video%20%26%20Image%20Modifier%29." target="_blank" class="border border-secondary/15 text-secondary px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/10 transition-all text-center">Hubungi Penjualan</a>
                     </div>
                 </div>
-                <div class="relative min-h-[400px] bg-surface-container-low flex items-center justify-center p-md lg:p-lg border-l border-white/5 lg:order-1 lg:border-r lg:border-l-0">
-                    <img alt="OVIM (Video &amp; Image Modifier) Interface" class="w-full h-full object-cover rounded-lg border border-white/10 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDimGVUXExIG8zcTQWwJX71lTdL-MWeuaCvuKd-CS7Gt8pWISxi-SSY4OkU4ic3j6oMk2ZWy2UQPQIsxZIwoT4e7V1wfjHvT14BTHFTDKBWOVrsfkuRuI7M1iw-ZYAY1uFGPnrqyNZaz5Ix9VARIGnoEZ1ymBV68dawijP54_mZYHFSBY-C_sBuyjbIeh4QoMNvXUeAWIiQKvkCiXC4lmBM-N7f8taqybrL684SqWuzxlwHgLQuiqgZ_OodL4ucv8dGbkNpKidAYZo"/>
+                <div class="relative min-h-[400px] bg-surface-container-low flex items-center justify-center p-md lg:p-lg border-l border-outline lg:order-1 lg:border-r lg:border-l-0">
+                    <img alt="OVIM (Video &amp; Image Modifier) Interface" class="w-full h-full object-cover rounded-lg border border-outline shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDimGVUXExIG8zcTQWwJX71lTdL-MWeuaCvuKd-CS7Gt8pWISxi-SSY4OkU4ic3j6oMk2ZWy2UQPQIsxZIwoT4e7V1wfjHvT14BTHFTDKBWOVrsfkuRuI7M1iw-ZYAY1uFGPnrqyNZaz5Ix9VARIGnoEZ1ymBV68dawijP54_mZYHFSBY-C_sBuyjbIeh4QoMNvXUeAWIiQKvkCiXC4lmBM-N7f8taqybrL684SqWuzxlwHgLQuiqgZ_OodL4ucv8dGbkNpKidAYZo"/>
                 </div>
             </div>
             
@@ -271,11 +334,11 @@
                     </ul>
                     <div class="flex flex-wrap gap-md">
                         <a href="/products/sentinel-security/" class="bg-primary-container text-white px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:shadow-[0_0_15px_rgba(217,4,4,0.4)] transition-all">Detail Produk</a>
-                        <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20tertarik%20dengan%20Sentinel%20Security." target="_blank" class="border border-secondary text-secondary px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/10 transition-all text-center">Hubungi Penjualan</a>
+                        <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20tertarik%20dengan%20Sentinel%20Security." target="_blank" class="border border-secondary/15 text-secondary px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/10 transition-all text-center">Hubungi Penjualan</a>
                     </div>
                 </div>
-                <div class="relative min-h-[400px] bg-surface-container-low flex items-center justify-center p-md lg:p-lg border-l border-white/5 ">
-                    <img alt="Sentinel Security Interface" class="w-full h-full object-cover rounded-lg border border-white/10 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG3FWPouFOc93HQttRRCAw2oSTJcR8jjpHCstxbjxGsk7Cv1KxujPvGvK3Qqs47_89pmSrpRyOoUpq3qnn3s66CADYX1TxwdX_HPzOvJsZk9UwEaCkS5ziiiYgq4H8KktcWPkuQulKYK5Sjkhmobmo1VBYM3He9BqUBKtE2gTt60N5RW8BRLSIdcWY1R99wzdoHGK9gnbM9TfRhKPtAr1oUFfepkIGZY7fV9Wk6psVIDDJKS2GzEIDQVdSsdlupZOMttp3nWVqgT4"/>
+                <div class="relative min-h-[400px] bg-surface-container-low flex items-center justify-center p-md lg:p-lg border-l border-outline ">
+                    <img alt="Sentinel Security Interface" class="w-full h-full object-cover rounded-lg border border-outline shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG3FWPouFOc93HQttRRCAw2oSTJcR8jjpHCstxbjxGsk7Cv1KxujPvGvK3Qqs47_89pmSrpRyOoUpq3qnn3s66CADYX1TxwdX_HPzOvJsZk9UwEaCkS5ziiiYgq4H8KktcWPkuQulKYK5Sjkhmobmo1VBYM3He9BqUBKtE2gTt60N5RW8BRLSIdcWY1R99wzdoHGK9gnbM9TfRhKPtAr1oUFfepkIGZY7fV9Wk6psVIDDJKS2GzEIDQVdSsdlupZOMttp3nWVqgT4"/>
                 </div>
             </div>
             
@@ -290,17 +353,17 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-md justify-center">
             <a href="/contact/" class="bg-primary-container text-white px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 transition-all">Hubungi Kami</a>
-            <button class="border border-white/20 text-on-surface px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:border-white/40 transition-all">Unduh Katalog</button>
+            <button class="border border-outline/20 text-on-surface px-lg py-sm font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-container-high transition-all">Unduh Katalog</button>
         </div>
     </section>
 </main>
 
     
-    <footer class="bg-surface-container-lowest border-t border-white/5">
+    <footer class="bg-surface-container-lowest border-t border-outline/10">
     <div class="w-full py-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-md">
         <div class="col-span-1 md:col-span-2">
             <div class="flex items-center gap-sm mb-md">
-                <img alt="MadXion Corp Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfUJ8LRWdn2rFTXR9o14Tc1c0eWlqj-CTdv3P2By7ZiNCpeuFKcxWKI1Imtl2W_JV3_F2fDDOIQOyPjjdstizclwQ"/>
+                <img alt="MadXion Corp Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfDOIQOyPjjdstizclwQ"/>
                 <span class="font-headline-lg text-headline-lg text-primary">MadXion Corp</span>
             </div>
             <p class="text-on-surface-variant max-w-sm mb-lg">
@@ -327,7 +390,7 @@
             <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/contact/">Dukungan</a>
         </div>
     </div>
-    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md border-t border-white/5">
+    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md border-t border-outline/10">
         <p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left">
             © 2026 MadXion Corp. Keunggulan Rekayasa.
         </p>

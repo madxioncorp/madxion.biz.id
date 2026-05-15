@@ -1,65 +1,41 @@
 <!DOCTYPE html>
-<html class="dark" lang="id-id">
-<head>
+<html lang="id-id">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Pengembangan Web &amp; Aplikasi | MadXion Corp</title>
+    
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
           tailwind.config = {
             darkMode: "class",
             theme: {
               extend: {
                 "colors": {
-                        "on-tertiary-fixed": "#2a1800",
-                        "tertiary-fixed": "#ffddb5",
-                        "on-surface": "#e5e2e1",
-                        "on-secondary-fixed": "#251a00",
-                        "tertiary-fixed-dim": "#ffb958",
-                        "primary-container": "#d90404",
-                        "primary-fixed": "#ffdad4",
-                        "tertiary-container": "#956000",
-                        "on-primary-fixed-variant": "#930001",
-                        "error-container": "#93000a",
-                        "inverse-on-surface": "#313030",
-                        "error": "#ffb4ab",
-                        "surface-container-low": "#1c1b1b",
-                        "background": "#131313",
-                        "on-tertiary": "#462b00",
-                        "on-primary-container": "#ffe9e6",
-                        "on-background": "#e5e2e1",
-                        "on-secondary-fixed-variant": "#5b4300",
-                        "secondary-fixed-dim": "#f9bd14",
-                        "on-tertiary-container": "#ffead4",
-                        "surface-bright": "#393939",
-                        "inverse-surface": "#e5e2e1",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-highest": "#353534",
-                        "surface-container-high": "#2a2a2a",
-                        "on-primary": "#690000",
-                        "on-secondary-container": "#634900",
-                        "surface-variant": "#353534",
-                        "secondary": "#ffd579",
-                        "surface-dim": "#131313",
-                        "primary": "#ffb4a8",
-                        "surface": "#131313",
-                        "secondary-fixed": "#ffdf9d",
-                        "on-surface-variant": "#e8bcb5",
-                        "on-tertiary-fixed-variant": "#643f00",
-                        "primary-fixed-dim": "#ffb4a8",
-                        "on-secondary": "#3f2e00",
-                        "secondary-container": "#f0b500",
-                        "on-error": "#690005",
-                        "outline": "#af8781",
-                        "tertiary": "#ffb958",
-                        "inverse-primary": "#c00002",
-                        "surface-container": "#201f1f",
-                        "surface-tint": "#ffb4a8",
-                        "surface-container-lowest": "#0e0e0e",
-                        "outline-variant": "#5e3f3a",
-                        "on-primary-fixed": "#410000"
+                        "on-surface": "var(--on-surface)",
+                        "background": "var(--background)",
+                        "primary-container": "var(--primary-container)",
+                        "on-primary-container": "var(--on-primary-container)",
+                        "on-background": "var(--on-background)",
+                        "surface-container-low": "var(--surface-container-low)",
+                        "surface-container-highest": "var(--surface-container-highest)",
+                        "surface-container-high": "var(--surface-container-high)",
+                        "surface-variant": "var(--surface-variant)",
+                        "secondary": "var(--secondary)",
+                        "surface": "var(--surface)",
+                        "on-surface-variant": "var(--on-surface-variant)",
+                        "surface-container": "var(--surface-container)",
+                        "outline": "var(--outline)",
                 },
                 "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -101,10 +77,48 @@
           }
         </script>
     <style>
+        :root {
+            --background: #fcfcfc;
+            --on-background: #1a1c1e;
+            --surface: #f3f3f3;
+            --on-surface: #1a1c1e;
+            --on-surface-variant: #49454f;
+            --surface-variant: #e7e0ec;
+            --surface-container-lowest: #ffffff;
+            --surface-container-low: #f7f2fa;
+            --surface-container: #f3edf7;
+            --surface-container-high: #ece6f0;
+            --surface-container-highest: #e6e0e9;
+            --primary-container: #d90404;
+            --on-primary-container: #ffffff;
+            --secondary: #625b71;
+            --outline: #79747e;
+        }
+
+        .dark {
+            --background: #131313;
+            --on-background: #e5e2e1;
+            --surface: #131313;
+            --on-surface: #e5e2e1;
+            --on-surface-variant: #e8bcb5;
+            --surface-variant: #353534;
+            --surface-container-lowest: #0e0e0e;
+            --surface-container-low: #1c1b1b;
+            --surface-container: #201f1f;
+            --surface-container-high: #2a2a2a;
+            --surface-container-highest: #353534;
+            --primary-container: #d90404;
+            --on-primary-container: #ffe9e6;
+            --secondary: #ffd579;
+            --outline: rgba(255, 255, 255, 0.05);
+            --outline-variant: rgba(255, 255, 255, 0.03);
+        }
+
         body {
-            background-color: #0A0A0A;
-            color: #e5e2e1;
+            background-color: var(--background);
+            color: var(--on-surface);
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -113,18 +127,27 @@
             background: radial-gradient(circle at center, rgba(217, 4, 4, 0.15) 0%, transparent 70%);
         }
         .tech-grid {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-image: linear-gradient(var(--outline-variant, rgba(128, 128, 128, 0.1)) 1px, transparent 1px), 
+                              linear-gradient(90deg, var(--outline-variant, rgba(128, 128, 128, 0.1)) 1px, transparent 1px);
             background-size: 40px 40px;
+        }
+        .glass-card {
+            background: rgba(var(--surface-rgb, 255, 255, 255), 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .dark .glass-card {
+            background: rgba(32, 31, 31, 0.6);
         }
     </style>
 </head>
 <body class="font-body-md text-body-md">
-    <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 h-20">
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline/10 h-20">
     <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <div class="flex items-center gap-sm">
-            <a href="https://madxion.biz.id/" class="flex items-center gap-sm">
+            <a href="http://localhost:1313/" class="flex items-center gap-sm">
                 <img alt="MadXion Corp Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfUJ8LRWdn2rFTXR9o14Tc1c0eWlqj-CTdv3P2By7ZiNCpeuFKcxWKI1Imtl2W_JV3_F2fDDOIQOyPjjdstizclwQ"/>
-                <span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight">MadXion Corp</span>
+                <span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">MadXion Corp</span>
             </a>
         </div>
         <div class="hidden md:flex items-center gap-lg">
@@ -142,7 +165,45 @@
             
             <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/contact/">Kontak</a>
             
+            
+            
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-surface-container-high transition-colors flex items-center justify-center text-on-surface" aria-label="Toggle Theme">
+                <span id="theme-toggle-dark-icon" class="material-symbols-outlined hidden">light_mode</span>
+                <span id="theme-toggle-light-icon" class="material-symbols-outlined hidden">dark_mode</span>
+            </button>
         </div>
+
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    
+    function updateIcons() {
+        if (document.documentElement.classList.contains('dark')) {
+            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add('hidden');
+        } else {
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        }
+    }
+
+    
+    updateIcons();
+
+    themeToggleBtn.addEventListener('click', function() {
+        
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+        updateIcons();
+    });
+</script>
     </div>
 </nav>
 
@@ -150,7 +211,7 @@
     
 <main class="pt-[120px]">
     
-    <section class="relative py-xl overflow-hidden border-b border-white/5">
+    <section class="relative py-xl overflow-hidden border-b border-outline/5">
         <div class="absolute inset-0 tech-grid -z-10 opacity-20"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full hero-glow -z-10"></div>
         <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
@@ -173,26 +234,26 @@
                 </div>
             </div>
             <div class="relative">
-                <div class="aspect-square md:aspect-video rounded-xl overflow-hidden border border-white/10 glass-card p-2">
+                <div class="aspect-square md:aspect-video rounded-xl overflow-hidden border border-outline glass-card p-2">
                     <img class="w-full h-full object-cover rounded-lg opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWwIU4B2eGWZxH--E7j7gJJDUBwUSJnQflZ9MprMbOpui5agUb8QgV2-talvQuG12T79GrQFt765fJqqn6b1FIjaUOHznPWLvS84moyfFrN4UVWDF8OBH2Rlpd9OAyIXt9jcT6tq1OyvQle5Fj1WoAf7VpLYtxHnvgI8bvqNyn5ddAsfnSEz-7xtLbK3lUAj1FPzUFR92FwNeVgbDLxnkI-Er09NiOT0pv42uq5Qj9TQfQGuqPaZXPBRgK37ktMANwzq-HzeHcQ1U" alt="Pengembangan Web &amp; Aplikasi"/>
                 </div>
                 
                 
-                <div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-md rounded-xl border border-white/10 backdrop-blur-md">
+                <div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-md rounded-xl border border-outline backdrop-blur-md">
                     <p class="font-label-sm text-label-sm text-secondary uppercase mb-sm">Teknologi Utama</p>
                     <div class="flex flex-wrap gap-xs">
                         
-                        <span class="px-xs py-1 bg-white/5 border border-white/10 rounded font-label-sm text-[10px]">React</span>
+                        <span class="px-xs py-1 bg-white/5 border border-outline rounded font-label-sm text-[10px]">React</span>
                         
-                        <span class="px-xs py-1 bg-white/5 border border-white/10 rounded font-label-sm text-[10px]">Next.js</span>
+                        <span class="px-xs py-1 bg-white/5 border border-outline rounded font-label-sm text-[10px]">Next.js</span>
                         
-                        <span class="px-xs py-1 bg-white/5 border border-white/10 rounded font-label-sm text-[10px]">Node.js</span>
+                        <span class="px-xs py-1 bg-white/5 border border-outline rounded font-label-sm text-[10px]">Node.js</span>
                         
-                        <span class="px-xs py-1 bg-white/5 border border-white/10 rounded font-label-sm text-[10px]">Rust</span>
+                        <span class="px-xs py-1 bg-white/5 border border-outline rounded font-label-sm text-[10px]">Rust</span>
                         
-                        <span class="px-xs py-1 bg-white/5 border border-white/10 rounded font-label-sm text-[10px]">Go</span>
+                        <span class="px-xs py-1 bg-white/5 border border-outline rounded font-label-sm text-[10px]">Go</span>
                         
-                        <span class="px-xs py-1 bg-white/5 border border-white/10 rounded font-label-sm text-[10px]">TypeScript</span>
+                        <span class="px-xs py-1 bg-white/5 border border-outline rounded font-label-sm text-[10px]">TypeScript</span>
                         
                     </div>
                 </div>
@@ -207,7 +268,7 @@
             
             <aside class="lg:col-span-4 flex flex-col gap-lg order-2 lg:order-1">
                 <div class="sticky top-24 space-y-lg">
-                    <div class="p-lg bg-surface-container rounded-xl border border-white/5 relative overflow-hidden group">
+                    <div class="p-lg bg-surface-container rounded-xl border border-outline relative overflow-hidden group">
                         <div class="absolute top-0 right-0 w-24 h-24 bg-primary-container/5 rounded-full -mr-12 -mt-12 group-hover:bg-primary-container/10 transition-colors"></div>
                         <h3 class="font-headline-md text-headline-md mb-md uppercase flex items-center gap-sm">
                             <span class="material-symbols-outlined text-primary">military_tech</span>
@@ -242,14 +303,14 @@
                         </ul>
                     </div>
                     
-                    <div class="p-lg bg-surface-container rounded-xl border border-white/5">
+                    <div class="p-lg bg-surface-container rounded-xl border border-outline">
                         <h3 class="font-headline-md text-headline-md mb-md uppercase flex items-center gap-sm">
                             <span class="material-symbols-outlined text-secondary">trending_up</span>
                             Alur Kerja
                         </h3>
-                        <div class="space-y-md relative before:absolute before:left-[15px] before:top-2 before:bottom-2 before:w-[2px] before:bg-white/5">
+                        <div class="space-y-md relative before:absolute before:left-[15px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline/5">
                             <div class="flex gap-md relative">
-                                <div class="w-8 h-8 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center shrink-0 z-10 bg-surface-container">
+                                <div class="w-8 h-8 rounded-full bg-secondary/10 border border-outline flex items-center justify-center shrink-0 z-10 bg-surface-container">
                                     <span class="text-[12px] font-bold text-secondary">01</span>
                                 </div>
                                 <div>
@@ -258,7 +319,7 @@
                                 </div>
                             </div>
                             <div class="flex gap-md relative">
-                                <div class="w-8 h-8 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center shrink-0 z-10 bg-surface-container">
+                                <div class="w-8 h-8 rounded-full bg-secondary/10 border border-outline flex items-center justify-center shrink-0 z-10 bg-surface-container">
                                     <span class="text-[12px] font-bold text-secondary">02</span>
                                 </div>
                                 <div>
@@ -267,7 +328,7 @@
                                 </div>
                             </div>
                             <div class="flex gap-md relative">
-                                <div class="w-8 h-8 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center shrink-0 z-10 bg-surface-container">
+                                <div class="w-8 h-8 rounded-full bg-secondary/10 border border-outline flex items-center justify-center shrink-0 z-10 bg-surface-container">
                                     <span class="text-[12px] font-bold text-secondary">03</span>
                                 </div>
                                 <div>
@@ -290,7 +351,7 @@
 
             
             <article class="lg:col-span-8 order-1 lg:order-2">
-                <div class="prose prose-invert prose-lg max-w-none 
+                <div class="prose dark:prose-invert prose-lg max-w-none 
                     prose-headings:font-headline-md prose-headings:uppercase prose-headings:tracking-tighter prose-headings:font-bold
                     prose-h2:text-3xl prose-h2:mb-8 prose-h2:text-on-surface
                     prose-h3:text-xl prose-h3:text-secondary prose-h3:mb-4
@@ -317,25 +378,25 @@
                 
                 <div class="mt-xl grid grid-cols-1 sm:grid-cols-2 gap-md">
                     
-                    <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="p-md bg-surface-container rounded-lg border border-outline hover:border-outline/50 transition-colors">
                         <span class="material-symbols-outlined text-secondary mb-sm">phonelink</span>
                         <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">PWA &amp; Mobile-First</h4>
                         <p class="text-sm text-on-surface-variant leading-relaxed">Aplikasi yang dioptimalkan untuk semua perangkat dengan pengalaman native.</p>
                     </div>
                     
-                    <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="p-md bg-surface-container rounded-lg border border-outline hover:border-outline/50 transition-colors">
                         <span class="material-symbols-outlined text-secondary mb-sm">api</span>
                         <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">API Kustom &amp; Integrasi</h4>
                         <p class="text-sm text-on-surface-variant leading-relaxed">Menghubungkan sistem bisnis Anda dengan alur kerja otomatis yang efisien.</p>
                     </div>
                     
-                    <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="p-md bg-surface-container rounded-lg border border-outline hover:border-outline/50 transition-colors">
                         <span class="material-symbols-outlined text-secondary mb-sm">security</span>
                         <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">Keamanan Kode</h4>
                         <p class="text-sm text-on-surface-variant leading-relaxed">Audit keamanan berkelanjutan selama proses pengembangan perangkat lunak.</p>
                     </div>
                     
-                    <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-white/10 transition-colors">
+                    <div class="p-md bg-surface-container rounded-lg border border-outline hover:border-outline/50 transition-colors">
                         <span class="material-symbols-outlined text-secondary mb-sm">speed</span>
                         <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">Performa &amp; Kecepatan</h4>
                         <p class="text-sm text-on-surface-variant leading-relaxed">Optimasi waktu muat untuk retensi pengguna dan SEO yang lebih baik.</p>
@@ -348,17 +409,17 @@
     </section>
 
     
-    <section class="py-xl border-t border-white/5 bg-surface-container-lowest/50">
+    <section class="py-xl border-t border-outline/5 bg-surface-container-lowest/50">
         <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="flex items-center justify-between mb-lg">
                 <h2 class="font-headline-md text-headline-md uppercase tracking-tighter">Eksplorasi Layanan Lain</h2>
-                <div class="h-[1px] flex-grow mx-lg bg-white/5 hidden md:block"></div>
+                <div class="h-[1px] flex-grow mx-lg bg-outline/5 hidden md:block"></div>
                 <a href="/services/" class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors uppercase font-bold">Lihat Semua</a>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
                 
                     
-                    <a href="/services/branding/" class="p-md bg-surface-container border border-white/5 rounded-lg hover:border-primary-container transition-all group flex flex-col gap-2">
+                    <a href="/services/branding/" class="p-md bg-surface-container border border-outline rounded-lg hover:border-primary-container transition-all group flex flex-col gap-2">
                         <div class="flex items-center justify-between">
                             <h3 class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors uppercase font-bold tracking-tight">Branding &amp; Strategi Visual</h3>
                             <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -368,7 +429,7 @@
                     
                 
                     
-                    <a href="/services/seo-optimization/" class="p-md bg-surface-container border border-white/5 rounded-lg hover:border-primary-container transition-all group flex flex-col gap-2">
+                    <a href="/services/seo-optimization/" class="p-md bg-surface-container border border-outline rounded-lg hover:border-primary-container transition-all group flex flex-col gap-2">
                         <div class="flex items-center justify-between">
                             <h3 class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors uppercase font-bold tracking-tight">Optimasi SEO</h3>
                             <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -378,7 +439,7 @@
                     
                 
                     
-                    <a href="/services/digital-marketing/" class="p-md bg-surface-container border border-white/5 rounded-lg hover:border-primary-container transition-all group flex flex-col gap-2">
+                    <a href="/services/digital-marketing/" class="p-md bg-surface-container border border-outline rounded-lg hover:border-primary-container transition-all group flex flex-col gap-2">
                         <div class="flex items-center justify-between">
                             <h3 class="font-label-sm text-label-sm text-on-surface group-hover:text-primary transition-colors uppercase font-bold tracking-tight">Pemasaran Digital</h3>
                             <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -395,11 +456,11 @@
 </main>
 
     
-    <footer class="bg-surface-container-lowest border-t border-white/5">
+    <footer class="bg-surface-container-lowest border-t border-outline/10">
     <div class="w-full py-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-md">
         <div class="col-span-1 md:col-span-2">
             <div class="flex items-center gap-sm mb-md">
-                <img alt="MadXion Corp Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfUJ8LRWdn2rFTXR9o14Tc1c0eWlqj-CTdv3P2By7ZiNCpeuFKcxWKI1Imtl2W_JV3_F2fDDOIQOyPjjdstizclwQ"/>
+                <img alt="MadXion Corp Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfDOIQOyPjjdstizclwQ"/>
                 <span class="font-headline-lg text-headline-lg text-primary">MadXion Corp</span>
             </div>
             <p class="text-on-surface-variant max-w-sm mb-lg">
@@ -426,7 +487,7 @@
             <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/contact/">Dukungan</a>
         </div>
     </div>
-    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md border-t border-white/5">
+    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md border-t border-outline/10">
         <p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left">
             © 2026 MadXion Corp. Keunggulan Rekayasa.
         </p>
