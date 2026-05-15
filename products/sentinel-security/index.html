@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="dark" lang="id-id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sentinel Security | MadXion Corp</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "on-tertiary-fixed": "#2a1800",
+                        "tertiary-fixed": "#ffddb5",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#251a00",
+                        "tertiary-fixed-dim": "#ffb958",
+                        "primary-container": "#d90404",
+                        "primary-fixed": "#ffdad4",
+                        "tertiary-container": "#956000",
+                        "on-primary-fixed-variant": "#930001",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313030",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "background": "#131313",
+                        "on-tertiary": "#462b00",
+                        "on-primary-container": "#ffe9e6",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "secondary-fixed-dim": "#f9bd14",
+                        "on-tertiary-container": "#ffead4",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary": "#690000",
+                        "on-secondary-container": "#634900",
+                        "surface-variant": "#353534",
+                        "secondary": "#ffd579",
+                        "surface-dim": "#131313",
+                        "primary": "#ffb4a8",
+                        "surface": "#131313",
+                        "secondary-fixed": "#ffdf9d",
+                        "on-surface-variant": "#e8bcb5",
+                        "on-tertiary-fixed-variant": "#643f00",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-secondary": "#3f2e00",
+                        "secondary-container": "#f0b500",
+                        "on-error": "#690005",
+                        "outline": "#af8781",
+                        "tertiary": "#ffb958",
+                        "inverse-primary": "#c00002",
+                        "surface-container": "#201f1f",
+                        "surface-tint": "#ffb4a8",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#5e3f3a",
+                        "on-primary-fixed": "#410000"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                },
+                "spacing": {
+                        "sm": "12px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "margin-desktop": "64px",
+                        "xs": "4px"
+                },
+                "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "display-lg-mobile": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-md": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "headline-lg": ["Space Grotesk"],
+                        "label-sm": ["JetBrains Mono"]
+                },
+                "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                }
+              },
+            },
+          }
+        </script>
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at center, rgba(217, 4, 4, 0.15) 0%, transparent 70%);
+        }
+        .tech-grid {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 h-20">
+    <div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+        <div class="flex items-center gap-sm">
+            <a href="https://madxion.biz.id/" class="flex items-center gap-sm">
+                <img alt="MadXion Corp Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfUJ8LRWdn2rFTXR9o14Tc1c0eWlqj-CTdv3P2By7ZiNCpeuFKcxWKI1Imtl2W_JV3_F2fDDOIQOyPjjdstizclwQ"/>
+                <span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight">MadXion Corp</span>
+            </a>
+        </div>
+        <div class="hidden md:flex items-center gap-lg">
+            
+            
+            <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/">Home</a>
+            
+            <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/about/">Tentang Kami</a>
+            
+            <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/services/">Layanan</a>
+            
+            <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/portfolio/">Portfolio</a>
+            
+            <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/products/">Produk</a>
+            
+            <a class="text-on-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary transition-colors duration-300" href="/contact/">Kontak</a>
+            
+        </div>
+    </div>
+</nav>
+
+    
+    
+<main class="pt-[120px]">
+    
+    <section class="relative py-xl overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 tech-grid -z-10 opacity-20"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full hero-glow -z-10"></div>
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+            <div>
+                <nav class="flex items-center gap-xs mb-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">
+                    <a href="/products/" class="hover:text-primary transition-colors">Produk</a>
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                    <span class="text-primary">Sentinel Security</span>
+                </nav>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md uppercase tracking-tighter leading-tight">
+                    Sentinel Security
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-lg">
+                    Mitigasi ancaman proaktif yang didukung oleh jaringan saraf canggih. Sentinel tidak hanya merespons pelanggaran; ia memprediksi dan menetralkan vektor sebelum dapat dieksploitasi.
+                </p>
+                <div class="flex flex-wrap gap-md">
+                    <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20tertarik%20dengan%20produk%20Sentinel%20Security." target="_blank" class="bg-primary-container text-on-primary-container px-lg py-sm rounded-lg font-label-sm text-label-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_20px_rgba(217,4,4,0.3)]">
+                        Coba Demo
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-video rounded-xl overflow-hidden border border-white/10 glass-card p-2 group">
+                    <img class="w-full h-full object-cover rounded-lg opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG3FWPouFOc93HQttRRCAw2oSTJcR8jjpHCstxbjxGsk7Cv1KxujPvGvK3Qqs47_89pmSrpRyOoUpq3qnn3s66CADYX1TxwdX_HPzOvJsZk9UwEaCkS5ziiiYgq4H8KktcWPkuQulKYK5Sjkhmobmo1VBYM3He9BqUBKtE2gTt60N5RW8BRLSIdcWY1R99wzdoHGK9gnbM9TfRhKPtAr1oUFfepkIGZY7fV9Wk6psVIDDJKS2GzEIDQVdSsdlupZOMttp3nWVqgT4" alt="Sentinel Security"/>
+                </div>
+                
+                <div class="absolute -bottom-6 -right-6 bg-surface-container-highest p-md rounded-xl border border-white/10 backdrop-blur-md">
+                    <div class="flex items-center gap-sm mb-xs">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+                        <span class="font-label-sm text-label-sm text-secondary uppercase">Enterprise Grade</span>
+                    </div>
+                    <p class="text-headline-md font-headline-md text-on-surface">Versi 4.2.1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-xl bg-surface-container-lowest">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+                
+                <aside class="lg:col-span-4 space-y-lg order-2 lg:order-1">
+                    <div class="p-lg bg-surface-container rounded-xl border border-white/5">
+                        <h3 class="font-headline-md text-headline-md mb-md uppercase flex items-center gap-sm">
+                            <span class="material-symbols-outlined text-primary">settings_suggest</span>
+                            Spesifikasi
+                        </h3>
+                        <ul class="space-y-sm">
+                            
+                            <li class="flex justify-between border-b border-white/5 pb-sm last:border-0">
+                                <span class="font-label-sm text-on-surface-variant uppercase">Arsitektur</span>
+                                <span class="font-body-md text-on-surface text-right">Zero-Trust</span>
+                            </li>
+                            
+                            <li class="flex justify-between border-b border-white/5 pb-sm last:border-0">
+                                <span class="font-label-sm text-on-surface-variant uppercase">Deteksi</span>
+                                <span class="font-body-md text-on-surface text-right">Neural-AI</span>
+                            </li>
+                            
+                            <li class="flex justify-between border-b border-white/5 pb-sm last:border-0">
+                                <span class="font-label-sm text-on-surface-variant uppercase">Respons</span>
+                                <span class="font-body-md text-on-surface text-right">&lt; 10ms</span>
+                            </li>
+                            
+                            <li class="flex justify-between border-b border-white/5 pb-sm last:border-0">
+                                <span class="font-label-sm text-on-surface-variant uppercase">Kepatuhan</span>
+                                <span class="font-body-md text-on-surface text-right">GDPR, HIPAA, ISO</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="p-lg bg-secondary/5 rounded-xl border border-secondary/20">
+                        <h3 class="font-headline-md text-headline-md mb-sm text-secondary uppercase">Integrasi Mulus</h3>
+                        <p class="text-on-surface-variant mb-md text-sm leading-relaxed">Produk kami dirancang untuk bekerja secara harmonis dengan tumpukan teknologi Anda yang sudah ada.</p>
+                        <div class="flex flex-wrap gap-xs">
+                            
+                            <span class="px-sm py-1 bg-surface-container-high rounded font-label-sm text-[10px] text-on-surface">Azure AD</span>
+                            
+                            <span class="px-sm py-1 bg-surface-container-high rounded font-label-sm text-[10px] text-on-surface">Okta</span>
+                            
+                            <span class="px-sm py-1 bg-surface-container-high rounded font-label-sm text-[10px] text-on-surface">Splunk</span>
+                            
+                            <span class="px-sm py-1 bg-surface-container-high rounded font-label-sm text-[10px] text-on-surface">ServiceNow</span>
+                            
+                        </div>
+                    </div>
+                </aside>
+
+                
+                <article class="lg:col-span-8 order-1 lg:order-2">
+                    <div class="prose prose-invert prose-lg max-w-none 
+                        prose-headings:font-headline-md prose-headings:uppercase prose-headings:tracking-tighter prose-headings:font-bold
+                        prose-h2:text-3xl prose-h2:mb-8 prose-h2:text-on-surface
+                        prose-h3:text-xl prose-h3:text-secondary prose-h3:mb-4
+                        prose-p:text-on-surface-variant prose-p:leading-relaxed prose-p:mb-8">
+                        <h2 id="benteng-digital-untuk-perusahaan-modern">Benteng Digital untuk Perusahaan Modern</h2>
+<p>Dalam dunia yang semakin terhubung, ancaman siber tidak pernah tidur. Sentinel Security memberikan ketenangan pikiran dengan sistem pertahanan yang selalu aktif dan selalu belajar. Kami tidak hanya melindungi data Anda; kami melindungi reputasi dan masa depan bisnis Anda.</p>
+<h3 id="keamanan-berbasis-ai">Keamanan Berbasis AI</h3>
+<p>Sentinel menggunakan teknologi jaringan saraf untuk membedakan antara perilaku pengguna normal dan aktivitas mencurigakan. Ini memungkinkan sistem untuk menghentikan serangan bahkan sebelum serangan tersebut masuk ke dalam basis data tanda tangan ancaman tradisional.</p>
+<ul>
+<li><strong>Zero-Trust Framework</strong>: Tidak ada yang dipercaya secara default, baik dari dalam maupun luar jaringan.</li>
+<li><strong>Enkripsi End-to-End</strong>: Melindungi data Anda saat beristirahat, saat berpindah, dan saat digunakan.</li>
+<li><strong>Skalabilitas</strong>: Sentinel tumbuh seiring dengan bertambahnya jumlah endpoint dan volume data perusahaan Anda.</li>
+</ul>
+<p>Lindungi aset digital Anda dengan standar keamanan tertinggi di industri.</p>
+
+                    </div>
+
+                    
+                    <div class="mt-xl grid grid-cols-1 sm:grid-cols-2 gap-md">
+                        
+                        <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-primary-container transition-all group">
+                            <span class="material-symbols-outlined text-primary mb-sm group-hover:scale-110 transition-transform">psychology</span>
+                            <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">Prediksi Ancaman</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Mengidentifikasi pola serangan baru menggunakan model pembelajaran mesin yang terus diperbarui.</p>
+                        </div>
+                        
+                        <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-primary-container transition-all group">
+                            <span class="material-symbols-outlined text-primary mb-sm group-hover:scale-110 transition-transform">security</span>
+                            <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">Neutralizer Otomatis</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Isolasi instan terhadap perangkat atau akun yang terkompromi secara otomatis.</p>
+                        </div>
+                        
+                        <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-primary-container transition-all group">
+                            <span class="material-symbols-outlined text-primary mb-sm group-hover:scale-110 transition-transform">search</span>
+                            <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">Pemindaian Dalam</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Analisis lalu lintas jaringan hingga ke tingkat paket terdalam untuk menemukan anomali tersembunyi.</p>
+                        </div>
+                        
+                        <div class="p-md bg-surface-container rounded-lg border border-white/5 hover:border-primary-container transition-all group">
+                            <span class="material-symbols-outlined text-primary mb-sm group-hover:scale-110 transition-transform">description</span>
+                            <h4 class="font-headline-md text-[18px] text-on-surface mb-xs uppercase">Laporan Kepatuhan</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Pembuatan laporan audit otomatis untuk memenuhi standar regulasi industri.</p>
+                        </div>
+                        
+                    </div>
+                    
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-xl bg-surface-container-low border-y border-white/5">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="flex justify-between items-end mb-xl">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-xs">Produk <span class="text-primary">Lainnya</span></h2>
+                    <p class="text-on-surface-variant">Jelajahi ekosistem solusi digital kami lainnya.</p>
+                </div>
+                <a href="/products/" class="text-primary font-label-sm text-label-sm uppercase tracking-widest flex items-center gap-xs hover:gap-sm transition-all">
+                    Lihat Semua <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+                
+                    
+                    <a href="/products/nexus-analytics/" class="glass-card p-lg rounded-xl border border-white/5 hover:border-primary-container transition-all group">
+                        <div class="flex items-center gap-sm mb-md">
+                            <span class="material-symbols-outlined text-primary">
+                                analytics
+                            </span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors uppercase">Nexus Analytics</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Transformasi data mentah perusahaan menjadi kecerdasan yang dapat ditindaklanjukan melalui visualisasi waktu nyata dan analisis prediktif.</p>
+                        <div class="flex items-center text-primary font-label-sm text-label-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                            Selengkapnya <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                        </div>
+                    </a>
+                    
+                
+                    
+                    <a href="/products/ovim/" class="glass-card p-lg rounded-xl border border-white/5 hover:border-primary-container transition-all group">
+                        <div class="flex items-center gap-sm mb-md">
+                            <span class="material-symbols-outlined text-primary">
+                                movie_edit
+                                
+                            </span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors uppercase">OVIM (Video &amp; Image Modifier)</h3>
+                        </div>
+                        <p class="text-on-surface-variant text-sm line-clamp-2 mb-md">Olah dan ubah video serta gambar Anda dengan performa tinggi menggunakan OVIM. Solusi cerdas untuk kebutuhan manipulasi media digital Anda.</p>
+                        <div class="flex items-center text-primary font-label-sm text-label-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                            Selengkapnya <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                        </div>
+                    </a>
+                    
+                
+                    
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-xl px-margin-mobile">
+        <div class="max-w-[1000px] mx-auto glass-card p-lg md:p-xl rounded-xl text-center border border-white/10 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/10 blur-[80px] rounded-full"></div>
+            <h2 class="font-headline-lg text-headline-lg mb-md uppercase">Tingkatkan Performa <span class="text-primary">Sekarang</span></h2>
+            <p class="text-on-surface-variant font-body-lg mb-lg max-w-xl mx-auto">Mulai perjalanan transformasi digital Anda dengan solusi berkelas dunia dari MadXion Corp.</p>
+            <a href="https://wa.me/6285183244599?text=Halo%20MadXion%20Corp,%20saya%20ingin%20berkonsultasi%20tentang%20produk%20Sentinel%20Security." target="_blank" class="bg-primary-container text-on-primary-container px-lg py-sm rounded-lg font-label-sm text-label-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                Konsultasi Sekarang
+            </a>
+        </div>
+    </section>
+</main>
+
+    
+    <footer class="bg-surface-container-lowest border-t border-white/5">
+    <div class="w-full py-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-md">
+        <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center gap-sm mb-md">
+                <img alt="MadXion Corp Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfUJ8LRWdn2rFTXR9o14Tc1c0eWlqj-CTdv3P2By7ZiNCpeuFKcxWKI1Imtl2W_JV3_F2fDDOIQOyPjjdstizclwQ"/>
+                <span class="font-headline-lg text-headline-lg text-primary">MadXion Corp</span>
+            </div>
+            <p class="text-on-surface-variant max-w-sm mb-lg">
+                Solusi Inovatif untuk Masa Depan Digital Anda
+            </p>
+            <div class="flex gap-md">
+                <a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+                <a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">code</span></a>
+                <a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined">mail</span></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-sm">
+            <span class="font-label-sm text-label-sm text-secondary font-bold uppercase mb-xs">Layanan</span>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/services/">Infrastruktur</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/services/">Pengembangan Aplikasi</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/services/">Strategi SEO</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/services/">Solusi Cloud</a>
+        </div>
+        <div class="flex flex-col gap-sm">
+            <span class="font-label-sm text-label-sm text-secondary font-bold uppercase mb-xs">Perusahaan</span>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/portfolio/">Portofolio</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="#">Kebijakan Privasi</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="#">Syarat & Ketentuan</a>
+            <a class="text-on-surface-variant hover:text-primary transition-all font-body-md text-body-md" href="/contact/">Dukungan</a>
+        </div>
+    </div>
+    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-md border-t border-white/5">
+        <p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left">
+            © 2026 MadXion Corp. Keunggulan Rekayasa.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
