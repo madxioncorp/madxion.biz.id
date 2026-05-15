@@ -35,7 +35,8 @@
                         "surface": "var(--surface)",
                         "on-surface-variant": "var(--on-surface-variant)",
                         "surface-container": "var(--surface-container)",
-                        "outline": "var(--outline)",
+                        "outline": "rgb(var(--outline) / <alpha-value>)",
+                        "outline-variant": "rgb(var(--outline-variant) / <alpha-value>)",
                 },
                 "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -92,7 +93,8 @@
             --primary-container: #d90404;
             --on-primary-container: #ffffff;
             --secondary: #625b71;
-            --outline: #79747e;
+            --outline: 121 116 126;
+            --outline-variant: 121 116 126;
         }
 
         .dark {
@@ -110,8 +112,8 @@
             --primary-container: #d90404;
             --on-primary-container: #ffe9e6;
             --secondary: #ffd579;
-            --outline: rgba(255, 255, 255, 0.05);
-            --outline-variant: rgba(255, 255, 255, 0.03);
+            --outline: 140 140 140;
+            --outline-variant: 80 80 80;
         }
 
         body {
@@ -127,8 +129,8 @@
             background: radial-gradient(circle at center, rgba(217, 4, 4, 0.15) 0%, transparent 70%);
         }
         .tech-grid {
-            background-image: linear-gradient(var(--outline-variant, rgba(128, 128, 128, 0.1)) 1px, transparent 1px), 
-                              linear-gradient(90deg, var(--outline-variant, rgba(128, 128, 128, 0.1)) 1px, transparent 1px);
+            background-image: linear-gradient(rgb(var(--outline-variant) / 0.1) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgb(var(--outline-variant) / 0.1) 1px, transparent 1px);
             background-size: 40px 40px;
         }
         .glass-card {
@@ -427,7 +429,7 @@
     <div class="w-full py-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-md">
         <div class="col-span-1 md:col-span-2">
             <div class="flex items-center gap-sm mb-md">
-                <img alt="MadXion Corp Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfDOIQOyPjjdstizclwQ"/>
+                <img alt="MadXion Corp Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgB0ateD95rTv28prt_eBk9NrvYoNZcXSSGnf6uOfw-o90UC80xFa8ZDCN0MT0hMQtJVI8hMVj-Sxv5N8pkymmvsi32KwuYU4pGkoWl_9JWeS7g_hjRLizhNBh6DqYJ7nyPh-AYW2M0I1GX52Z9UzSwBr_41ykVNt6CFVjBrKU72SkAcNrtDBfUJ8LRWdn2rFTXR9o14Tc1c0eWlqj-CTdv3P2By7ZiNCpeuFKcxWKI1Imtl2W_JV3_F2fDDOIQOyPjjdstizclwQ"/>
                 <span class="font-headline-lg text-headline-lg text-primary">MadXion Corp</span>
             </div>
             <p class="text-on-surface-variant max-w-sm mb-lg">
